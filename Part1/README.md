@@ -3,3 +3,4 @@ In this initial segment, we'll lay down the groundwork for our Spring Boot appli
 
 ## Step 1
 Kicking off our project begins with [Spring Initializr](https://start.spring.io/), the go-to tool for generating a Spring Boot project skeleton. 
+![Spring Initializr](/imgs/1.png)
