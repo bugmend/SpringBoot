@@ -6,3 +6,5 @@ Kicking off our project begins with [Spring Initializr](https://start.spring.io/
 ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/1.png)
 ### General Project Structure
 ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/2.png)
+### JPA and Hibernate
+![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/3.png)
