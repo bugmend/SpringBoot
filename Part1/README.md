@@ -7,7 +7,7 @@ Kicking off our project begins with [Spring Initializr](https://start.spring.io/
 ### General Project Structure
 ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/2.png)
 ### JPA and Hibernate
-![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/3.png)
+![JPA and Hibernate](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/3.png)
 ### Data Management
 1. Pull the MySQL Docker image ```docker pull mysql```
 2. Run the MySQL container with a root password of your choice  ``` docker run --name eventify-mysql -e MYSQL_ROOT_PASSWORD=eventifypass -p 3307:3306 -d mysql ```
@@ -18,7 +18,7 @@ Kicking off our project begins with [Spring Initializr](https://start.spring.io/
 3. Access the MySQL
    - Shell: ```docker exec -it eventify-mysql mysql -u root -p your_password```
    - GUI (IntelliJ IDEA Database panel
-     ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/5.png)
+     ![Database Access](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/5.png)
 4. Add Spring Boot Data Source and JPA Configuration Properties to ```resources/application.properties``` file
    ```
    spring.datasource.url=jdbc:mysql://localhost:3307/eventify?useSSL=false&serverTimezone=UTC
@@ -30,7 +30,7 @@ Kicking off our project begins with [Spring Initializr](https://start.spring.io/
    spring.sql.init.mode=always
    ```
 The below diagram visualizes the flow of data and interactions in a Spring Boot application following the Model-View-Controller (MVC) architecture pattern. At the forefront, the Controller (```EventController.java```) is responsible for handling incoming ```HTTP``` requests and sending responses to the client(s). It acts as the intermediary between the view, which is typically on the client-side, and the application's Service layer (```EventService.java```), encapsulating the business logic of the application. The Service interacts with the Repository layer, which abstracts the data access logic, providing a clean separation between how data is accessed and the underlying database operations. The Repository leverages JPA (Java Persistence API) to translate high-level operations into SQL queries, with Hibernate acting as the ORM (Object-Relational Mapping) implementation over JDBC (Java Database Connectivity), ultimately interfacing with the database to perform CRUD (Create, Read, Update, Delete) operations. The Model (```EventModel.java```) represents the data structure, mapping the application's domain model to the database's tables and columns. This structured approach allows for modular development, ease of testing, and maintainability, with clear pathways and responsibilities for each component in the application's data management process.
-![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/4.png)
+![Workflow](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/4.png)
 5. Testing the APIs
 
 ### API Documentation
@@ -39,7 +39,7 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
    implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.3'
    ```
    - Reload the ```build.gradle``` file to download the dependency
-   - Add some API meta data to the main application (```EventsApplication.java```)
+   - Provide metadata for the OpenAPI specification. Add the below code to (```EventsApplication.java```)
    ```
    @OpenAPIDefinition(info = @Info(
 		title = "Event Management API",
@@ -57,4 +57,5 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
 ))
    ```
    - Access the Swagger UI ```http://localhost:8090/swagger-ui/index.html```
+![Swagger UI](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/6.png)
 
