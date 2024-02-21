@@ -33,11 +33,28 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
 ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/4.png)
 5. Testing the APIs
 
-6. API Documentation
+### API Documentation
    - Add the Swagger dependency in ```build.gradle```
    ```
    implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.3'
    ```
    - Reload the ```build.gradle``` file to download the dependency
+   - Add some API meta data to the main application (```EventsApplication.java```)
+   ```
+   @OpenAPIDefinition(info = @Info(
+		title = "Event Management API",
+		version = "1.0",
+		description = "Event Management",
+		contact = @Contact(
+				name = "XU University",
+				url = "http://www.xu-university.de",
+				email = "api@xu-university.de"
+		),
+		license = @License(
+				name = "MIT License",
+				url = "http://www.api.xu-university.de/license"
+		)
+))
+   ```
    - Access the Swagger UI ```http://localhost:8090/swagger-ui/index.html```
 
