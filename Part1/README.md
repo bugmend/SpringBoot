@@ -53,6 +53,7 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
  	 "dateTime": "2024-02-21T15:36:49.724Z"
 	}
   ```
+- 🔴 DELETE /api/events/{id}
 ### API Documentation
    - Add the Swagger dependency in ```build.gradle```
    ```
