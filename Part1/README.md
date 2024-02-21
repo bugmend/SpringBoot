@@ -35,7 +35,6 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
 - 🔵 GET /api/events/
 - 🔵 GET /api/events/{id}
 - 🟢 POST /api/events
-  Example Value:
   ```
 {
   "id": 4,
@@ -44,7 +43,7 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
   "dateTime": "2024-02-21T15:36:49.724Z"
 }
   ```
-- 
+
 ### API Documentation
    - Add the Swagger dependency in ```build.gradle```
    ```
