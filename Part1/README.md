@@ -31,8 +31,8 @@ Kicking off our project begins with [Spring Initializr](https://start.spring.io/
    ```
 The below diagram visualizes the flow of data and interactions in a Spring Boot application following the Model-View-Controller (MVC) architecture pattern. At the forefront, the Controller (```EventController.java```) is responsible for handling incoming ```HTTP``` requests and sending responses to the client(s). It acts as the intermediary between the view, which is typically on the client-side, and the application's Service layer (```EventService.java```), encapsulating the business logic of the application. The Service interacts with the Repository layer, which abstracts the data access logic, providing a clean separation between how data is accessed and the underlying database operations. The Repository leverages JPA (Java Persistence API) to translate high-level operations into SQL queries, with Hibernate acting as the ORM (Object-Relational Mapping) implementation over JDBC (Java Database Connectivity), ultimately interfacing with the database to perform CRUD (Create, Read, Update, Delete) operations. The Model (```EventModel.java```) represents the data structure, mapping the application's domain model to the database's tables and columns. This structured approach allows for modular development, ease of testing, and maintainability, with clear pathways and responsibilities for each component in the application's data management process.
 ![Workflow](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/4.png)
-5. Testing the APIs
-
+### Testing the APIs
+- <span style="color:#1E90FF">GET /api/events/{id}</span>
 ### API Documentation
    - Add the Swagger dependency in ```build.gradle```
    ```
