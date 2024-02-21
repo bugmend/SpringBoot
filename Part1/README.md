@@ -9,6 +9,8 @@ Kicking off our project begins with [Spring Initializr](https://start.spring.io/
 ### JPA and Hibernate
 ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/3.png)
 ### Data Management
-1. Pull MySQL Docker image ```docker pull mysql```
+1. Pull the MySQL Docker image ```docker pull mysql```
 2. Run the MySQL container with a root password of your choice  ``` docker run --name eventify-mysql -e MYSQL_ROOT_PASSWORD=eventifypass -p 3307:3306 -d mysql ```
+   - ```--name eventify-mysql```: Names your container ```eventify-mysql``` foe easier reference
+   - ```-e MYSQL_ROOT_PASSWORD=eventifypass```: Defines an environment variable, ```MYSQL_ROOT_PASSWORD```, to set the ```root`` passwrod to ```eventifypass```
 ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/4.png)
