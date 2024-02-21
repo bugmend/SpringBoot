@@ -43,7 +43,7 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
  	 "dateTime": "2024-02-21T15:36:49.724Z"
 	}
   ```
-  - 🟠 PUT /api/events/{id}
+- 🟠 PUT /api/events/{id}
 
     ```
  	{
