@@ -36,12 +36,7 @@ The below diagram visualizes the flow of data and interactions in a Spring Boot 
 - 🔵 GET /api/events/{id}
 - 🟢 POST /api/events
   ```
-{
-  "id": 4,
-  "name": "AI Secrets",
-  "location": "Berlin",
-  "dateTime": "2024-02-21T15:36:49.724Z"
-}
+  Some code.
   ```
 
 ### API Documentation
