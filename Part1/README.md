@@ -15,4 +15,5 @@ Kicking off our project begins with [Spring Initializr](https://start.spring.io/
    - ```-e MYSQL_ROOT_PASSWORD=eventifypass```: Defines an environment variable, ```MYSQL_ROOT_PASSWORD```, to set the ```root``` password to ```eventifypass```
    - ```-p 3307:3306```: Maps port ```3306``` (MySQL default port number) of the container to port ```3307``` on your host.
    - ```-d```: Runs the container in detached mode, allowing the terminal to be used for other commands.
+3. Access the MySQL Shell: ```docker exec -it eventify-mysql mysql -u root -p your_password```
 ![Spring Initializr](https://github.com/baheerxu/SpringBoot/blob/main/Part1/imgs/4.png)
