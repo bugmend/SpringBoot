@@ -1,0 +1,56 @@
+#type Book {
+#    id: ID!
+#    name: String
+#    genre: Genre
+#}
+#
+#enum Genre{
+#    HISTORY,
+#    SCIENCE,
+#    FICTION
+#}
+#
+#type Query {
+#    findAll: [Book]!
+#    findOne(id: ID): Book
+#}
+#
+#type Mutation {
+#    create(name: String, genre: Genre): Book
+#    update(id: ID, name: String, genre: Genre): Book
+#    delete(id: ID): Book
+#}
+scalar DateTime
+
+type Query {
+    allBook: [Book]!
+    findAllOrders: [Order]!
+}
+
+type Mutation {
+    createBook(name: String, genre: Genre): Book
+}
+
+type Book {
+    id: ID!
+    name: String
+    genre: Genre
+}
+
+type Order {
+    orderId: ID!
+    book: Book
+    orderedOn: DateTime
+}
+
+type User {
+    userId: ID!
+    username: String
+}
+
+enum Genre{
+    HISTORY
+    FICTION
+    SCIENCE
+}
+
