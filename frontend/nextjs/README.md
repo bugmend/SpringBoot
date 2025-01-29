@@ -87,6 +87,7 @@ console.log(greet());
 ```
 6. Spread and Rest Operators
 > Spread (...): Expands an array or object into individual elements.
+> 
 > Rest (...): Collects multiple elements into an array.
 ```javascript
 // Spread
