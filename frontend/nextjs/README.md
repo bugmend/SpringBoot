@@ -18,3 +18,35 @@
 ## Workflow
 
 ![Workflow](./images/img.png)
+
+## Folder Structure
+```
+my-next-app/
+├── .next/                  # Next.js build output (automatically generated)
+├── node_modules/           # Installed dependencies (automatically generated)
+├── public/                 # Static assets (e.g., images, fonts)
+│   ├── vercel.svg          # Example static file
+│   └── favicon.ico         # Favicon
+├── app/                    # App Router (replaces `pages`)
+│   ├── (auth)/             # Route group (optional)
+│   │   └── login/          # Nested route
+│   │       └── page.js     # Login page
+│   ├── about/              # Route segment
+│   │   └── page.js         # About page
+│   ├── api/                # API routes
+│   │   └── hello/          # API route
+│   │       └── route.js    # API handler
+│   ├── layout.js           # Root layout
+│   ├── page.js             # Home page
+│   └── globals.css         # Global styles
+├── .gitignore              # Files to ignore in Git
+├── eslint.config.mjs       # ESLint configuration
+├── jsconfig.json           # JavaScript configuration (e.g., path aliases)
+├── next.config.mjs         # Next.js configuration
+├── package-lock.json       # Dependency lock file (if using npm)
+├── package.json            # Project dependencies and scripts
+├── postcss.config.mjs      # PostCSS configuration
+├── tailwind.config.mjs     # Tailwind CSS configuration
+└── README.md               # Project documentation
+
+```
