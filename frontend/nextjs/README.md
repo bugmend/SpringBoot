@@ -13,7 +13,7 @@
 
 [^1]: You need to set up a separate backend (e.g., Node.js, Express) to handle API requests.
 [^2]: You can create backend endpoints directly within your Next.js application by adding files to the `pages/api` directory.
-[^3]: You would need to use additional tools like `Gatsby` to generate static sites.
+[^3]: You would need to use additional tools like [Gatsby](https://www.gatsbyjs.com/) to generate static sites.
 
 ## Workflow
 
@@ -52,7 +52,7 @@ my-next-app/
 ```
 
 ## NextJS uses ES6 Standard
-ES6 defines the JavaScript programming language.
+ES6 defines the JavaScript programming language. Most modern browsers fully support ES6. For older browsers, [Babel](https://babeljs.io/) can convert ES6 code into ES5 for compatibility.
 
 ### Key features
 1. `let`, replaces `var` and `const` for Variable Declarations
@@ -67,7 +67,7 @@ console.log(add(2, 3));
 ```
 3. Template Literals
 ```javascript
-const name = "Alice";
+const name = "Abraham";
 console.log(`Hello, ${name}!`); 
 ```
 4. Destructuring Assignment
@@ -116,7 +116,7 @@ class Person {
     console.log(`Hello, ${this.name}!`);
   }
 }
-const alice = new Person("Alice");
+const alice = new Person("Isaac");
 alice.greet();
 ```
 8. Modules
@@ -128,4 +128,63 @@ export const add = (a, b) => a + b;
 import { add } from './math.js';
 console.log(add(2, 3));
 ```
-9. 
+9. Promises
+> A Promise is a way to handle async operations.
+>
+> It avoids callback hell and makes code cleaner.
+```javascript
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Data fetched!"), 1000);
+  });
+};
+
+fetchData().then(data => console.log(data));
+```
+10. Enhanced Object Literals
+> Shorter syntax for defining object properties and methods.
+```javascript
+const name = "Bianca";
+const age = 25;
+
+const person = { name, age, greet() { console.log(`Hello, ${this.name}!`); } };
+person.greet(); 
+```
+11. Iterators and Generators
+> Iterators: Objects that define a sequence and a return value.
+>
+> Generators: Functions that can be paused and resumed.
+```javascript
+// Generator
+function* generator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+// Iterator
+const gen = generator();
+console.log(gen.next().value); 
+console.log(gen.next().value); 
+```
+12. Map and Set
+> Map: A collection of key-value pairs.
+>
+> Set: A collection of unique values.
+```javascript
+// Map
+const map = new Map();
+map.set("name", "Aaron");
+console.log(map.get("name")); // Aaron
+
+// Set
+const set = new Set([1, 2, 3, 3]);
+console.log([...set]); // [1, 2, 3]
+```
+13. Symbol
+> A unique and immutable primitive value, often used as object property keys.
+```javascript
+const id = Symbol("id");
+const user = { [id]: 123, name: "Sarah" };
+console.log(user[id]); 
+```
