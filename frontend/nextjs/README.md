@@ -20,7 +20,7 @@
 ![Workflow](./images/img.png)
 
 ## Folder Structure
-
+```
 my-next-app/
 ├── .next/                  # Next.js build output (automatically generated)
 ├── node_modules/           # Installed dependencies (automatically generated)
@@ -48,3 +48,5 @@ my-next-app/
 ├── postcss.config.mjs      # PostCSS configuration
 ├── tailwind.config.mjs     # Tailwind CSS configuration
 └── README.md               # Project documentation
+
+```
