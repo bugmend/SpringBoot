@@ -40,9 +40,9 @@ my-next-app/
 │   ├── page.js             # Home page
 │   └── globals.css         # Global styles
 ├── .gitignore              # Files to ignore in Git
-├── eslint.config.mjs       # ESLint configuration
+├── eslint.config.mjs       # ESLint configuration, used to find and fix problems in JS code
 ├── jsconfig.json           # JavaScript configuration (e.g., path aliases)
-├── next.config.mjs         # Next.js configuration
+├── next.config.mjs         # Next.js configuration, mjs indicate that it uses ES Modules (ESM) syntax
 ├── package-lock.json       # Dependency lock file (if using npm)
 ├── package.json            # Project dependencies and scripts
 ├── postcss.config.mjs      # PostCSS configuration
@@ -50,3 +50,81 @@ my-next-app/
 └── README.md               # Project documentation
 
 ```
+
+## NextJS uses ES6 Standard
+ES6 defines the JavaScript programming language.
+
+### Key features
+1. `let`, replaces `var` and `const` for Variable Declarations
+```javascript
+let x = 10;
+const y = 20; 
+```
+2. Arrow functions
+```javascript
+const add = (a, b) => a + b;
+console.log(add(2, 3)); 
+```
+3. Template Literals
+```javascript
+const name = "Alice";
+console.log(`Hello, ${name}!`); 
+```
+4. Destructuring Assignment
+> Extract values from arrays or objects into variables.
+```javascript
+const [a, b] = [1, 2];
+console.log(a, b);
+```
+
+5.  Default Parameters
+> Set default values for function parameters.
+```javascript
+function greet(name = "Guest") {
+  return `Hello, ${name}!`;
+}
+console.log(greet());
+```
+6. Spread and Rest Operators
+> Spread (...): Expands an array or object into individual elements.
+> Rest (...): Collects multiple elements into an array.
+```javascript
+// Spread
+const arr = [1, 2, 3];
+const newArr = [...arr, 4, 5];
+
+// Rest
+function sum(...numbers) {
+    let total = 0;
+    for (let num of numbers) {
+        total += num;
+    }
+    return total;
+}
+
+console.log(sum(1, 2, 3));
+```
+7. Classes
+> Makes object-oriented programming easier.
+```javascript
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello, ${this.name}!`);
+  }
+}
+const alice = new Person("Alice");
+alice.greet();
+```
+8. Modules
+```javascript
+// math.js
+export const add = (a, b) => a + b;
+
+// app.js
+import { add } from './math.js';
+console.log(add(2, 3));
+```
+9. 
