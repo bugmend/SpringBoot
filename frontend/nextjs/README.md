@@ -1,6 +1,4 @@
-
-
-
+# Introduction:
 | Feature                  | React                       | Next.js                         |
 |--------------------------|-----------------------------|---------------------------------|
 | **Type**                 | Library                     | Framework                       |
@@ -16,3 +14,7 @@
 [^1]: You need to set up a separate backend (e.g., Node.js, Express) to handle API requests.
 [^2]: You can create backend endpoints directly within your Next.js application by adding files to the `pages/api` directory.
 [^3]: You would need to use additional tools like `Gatsby` to generate static sites.
+
+## Workflow
+
+![Workflow](./images/img.png)
