@@ -15,7 +15,3 @@ I welcome contributions from students. If you would like to contribute to the pr
 2. Make changes to the forked repository
 3. Commit your changes and push it to the forked repository
 4. Open a Pull Request
-
-`
-import py from frappe
-`
