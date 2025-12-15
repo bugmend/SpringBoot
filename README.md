@@ -17,6 +17,6 @@ I welcome contributions from students. If you would like to contribute to the pr
 4. Open a Pull Request
 5. ```
 
-   ```
+   `
    import py
-   ```
+   `
